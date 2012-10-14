@@ -1,0 +1,10 @@
+Django==1.4.1
+South==0.7.6
+django-admin-tools==0.4.1
+django-debug-toolbar==0.9.4
+django-extensions==0.9
+django-pdb==0.3.2
+ipython==0.13
+psycopg2==2.4.5
+readline==6.2.2
+wsgiref==0.1.2

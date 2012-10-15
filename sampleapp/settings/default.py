@@ -32,7 +32,7 @@ ADMIN_MEDIA_PREFIX = '/static/admin/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-#    os.path.abspath(os.path.join(ABSOLUTE_PROJECT_ROOT, 'static_extra/')),
+    os.path.abspath(os.path.join(ABSOLUTE_PROJECT_ROOT, 'static_extra/')),
 )
 
 ADMINS = (
@@ -98,7 +98,7 @@ TEMPLATE_LOADERS = (
 )
 
 MIDDLEWARE_CLASSES = (
-    #'django.middleware.common.CommonMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -126,6 +126,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.debug',
     'django.core.context_processors.i18n',
     'django.core.context_processors.media',
+    'django.core.context_processors.static',
     # required by django-admin-tools
     'django.core.context_processors.request',
     'django.contrib.messages.context_processors.messages',

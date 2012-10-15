@@ -1,7 +1,5 @@
-local.py
-
-# everything starts with a dot ".", which is hidden
 .*
+local.py
 
 *.py[co]
 

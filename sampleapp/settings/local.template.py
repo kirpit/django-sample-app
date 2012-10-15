@@ -22,9 +22,9 @@ DATABASES = {
 }
 
 # URL that handles the media, static, etc.
-MEDIA_URL = '/media/'
-STATIC_URL = '/static/'
-ADMIN_MEDIA_PREFIX = '/media/admin/'
+#MEDIA_URL = '/media/'
+#STATIC_URL = '/static/'
+#ADMIN_MEDIA_PREFIX = '/static/admin/'
 
 INSTALLED_APPS += (
     'debug_toolbar',

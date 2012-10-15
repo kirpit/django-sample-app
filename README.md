@@ -10,7 +10,9 @@ Remember to install readline with easy_install for shell_plus:
 Create the symbolic link to your django admin static files under "media" dir:
 `ln -s /path/to/site-packages/django/contrib/admin/static/admin /path/to/project/media/admin`
 
-Copy local.template.py => local.py and modify necessary changes.
+Go to [http://www.miniwebtool.com/django-secret-key-generator/](http://www.miniwebtool.com/django-secret-key-generator/), create your secret key, copy it. Edit your `sampleapp/settings/default.py`, find `SECRET_KEY` line, paste your secret key.
+
+Copy `sampleapp/settings/local.template.py` => local.py into the same directory and modify necessary changes.
 
 Do `./manage.py syncdb` and `./manage.py migrate`
 

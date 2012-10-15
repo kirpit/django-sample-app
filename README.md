@@ -35,9 +35,8 @@ You should already know what is [virtualenv](http://www.virtualenv.org/), prefer
 Now, you need the *django-sample-app* project files in your workspace:
 
 `$ cd /path/to/your/workspace`  
-`$ git clone git://github.com/kirpit/django-sample-app.git`  
-`$ mv django-sample-app myproject && cd myproject`  
-`$ mv sampleapp myproject`  
+`$ git clone git://github.com/kirpit/django-sample-app.git myproject && cd myproject`
+`$ mv sampleapp myproject`
 
 ### 3. Requirements
 Right there, you will find the *requirements.txt* file that has all the great debugging tools, django helpers and some other cool stuff. To install them, simply type:
@@ -64,6 +63,9 @@ Go to <http://www.miniwebtool.com/django-secret-key-generator/>, create your sec
 
 #### Other settings stuff
 It is good idea to make a **find & replace** within this default settings file as there are some "sampleapp" string left such as `ROOT_URLCONF` or `LOCAL_APPS` variables, but not only.
+
+#### Main URL root
+You also have to config your application URLs, specific to your own needs. For the beginning, the sample app has only one view that you need to modify its namespace from `myproject/urls.py`, where it *imports HomeView*.
 
 #### local.py (development specific) settings file
 Copy `myproject/settings/local.template.py` as `local.py` into the same directory and modify necessary changes. **local.py** is always ignored by **.gitignore**, so this is the machine specific settings usually for development purposes. 

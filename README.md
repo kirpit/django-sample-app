@@ -35,8 +35,8 @@ You should already know what is [virtualenv](http://www.virtualenv.org/), prefer
 Now, you need the *django-sample-app* project files in your workspace:
 
 `$ cd /path/to/your/workspace`  
-`$ git clone git://github.com/kirpit/django-sample-app.git myproject && cd myproject`
-`$ mv sampleapp myproject`
+`$ git clone git://github.com/kirpit/django-sample-app.git myproject && cd myproject`  
+`$ mv sampleapp myproject`  
 
 ### 3. Requirements
 Right there, you will find the *requirements.txt* file that has all the great debugging tools, django helpers and some other cool stuff. To install them, simply type:

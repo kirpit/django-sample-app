@@ -12,15 +12,15 @@ The sample application comes with:
 that are combined together with [initializr](http://www.initializr.com/). And its current `requirements.txt` file is:
 
 ```
-Django==1.4.1
+Django==1.4.2
 South==0.7.6
 django-admin-tools==0.4.1
 django-debug-toolbar==0.9.4
-django-extensions==0.9
+django-extensions==1.0.0
 django-pdb==0.3.2
-ipython==0.13
+ipython==0.13.1
 psycopg2==2.4.5
-readline==6.2.2
+readline==6.2.4.1
 wsgiref==0.1.2
 ```
 
@@ -34,9 +34,9 @@ You should already know what is [virtualenv](http://www.virtualenv.org/), prefer
 ### 2. Download
 Now, you need the *django-sample-app* project files in your workspace:
 
-`$ cd /path/to/your/workspace`  
-`$ git clone git://github.com/kirpit/django-sample-app.git myproject && cd myproject`  
-`$ mv sampleapp myproject`  
+    $ cd /path/to/your/workspace
+    $ git clone git://github.com/kirpit/django-sample-app.git myproject && cd myproject
+    $ mv sampleapp myproject
 
 ### 3. Requirements
 Right there, you will find the *requirements.txt* file that has all the great debugging tools, django helpers and some other cool stuff. To install them, simply type:

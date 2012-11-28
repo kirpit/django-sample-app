@@ -10,7 +10,12 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
+    <!-- http://jqueryui.com/themeroller/ -->
+    <!-- http://stackoverflow.com/questions/1348559/are-there-hosted-jquery-ui-themes-anywhere -->
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/jquery-ui/jquery-ui-base.css">
     <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/font-awesome.min.css">
+    <!--[if lt IE 8]><link rel="stylesheet" href="{{ STATIC_URL }}css/font-awesome-ie7.min.css"><![endif]-->
     <style>
         body {
             padding-top: 60px;
@@ -19,9 +24,7 @@
     </style>
     <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap-responsive.min.css">
     <link rel="stylesheet" href="{{ STATIC_URL }}css/main.css">
-
-    <script src="{{ STATIC_URL }}js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
-    {% block extra_head %}{% endblock %}
+    <script src="{{ STATIC_URL }}js/lib/modernizr-2.6.1-respond-1.1.0.min.js"></script>
 </head>
 <body>
 <!--[if lt IE 7]>
@@ -76,20 +79,15 @@
     </footer>
 
 </div> <!-- /container -->
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="{{ STATIC_URL }}js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
-
-<script src="{{ STATIC_URL }}js/vendor/bootstrap.min.js"></script>
-
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="{{ STATIC_URL }}js/lib/jquery-1.8.3.min.js"><\/script>')</script>
 <script src="{{ STATIC_URL }}js/plugins.js"></script>
 <script src="{{ STATIC_URL }}js/main.js"></script>
-
 <script>
-    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(g,s)}(document,'script'));
+var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
 </script>
 </body>
 </html>

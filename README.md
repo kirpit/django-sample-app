@@ -4,10 +4,12 @@ django-sample-app is a **minimal** sample application to start developing your w
 
 The sample application comes with:
 
-* [H5BP](http://html5boilerplate.com/) 4.0.0
-* [jQuery](http://jquery.com/) 1.8.2
-* [Modernizr](http://modernizr.com/) 2.6.1
-* [Twitter Bootstrap](http://twitter.github.com/bootstrap/) 2.1.1
+* [H5BP](http://html5boilerplate.com/) v4.0.0
+* [Modernizr](http://modernizr.com/) v2.6.1
+* [jQuery](http://jquery.com/) v1.8.3
+* [jQuery UI](http://jqueryui.com/) v1.9.2
+* [Twitter Bootstrap](http://twitter.github.com/bootstrap/) v2.2.1
+* [Font Awesome](http://fortawesome.github.com/Font-Awesome/) v2.0
 
 that are combined together with [initializr](http://www.initializr.com/). And its current `requirements.txt` file is:
 
@@ -16,7 +18,7 @@ Django==1.4.2
 South==0.7.6
 django-admin-tools==0.4.1
 django-debug-toolbar==0.9.4
-django-extensions==1.0.0
+django-extensions==1.0.1
 django-pdb==0.3.2
 ipython==0.13.1
 psycopg2==2.4.5

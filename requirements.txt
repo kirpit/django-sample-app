@@ -2,7 +2,7 @@ Django==1.4.2
 South==0.7.6
 django-admin-tools==0.4.1
 django-debug-toolbar==0.9.4
-django-extensions==1.0.0
+django-extensions==1.0.1
 django-pdb==0.3.2
 ipython==0.13.1
 psycopg2==2.4.5

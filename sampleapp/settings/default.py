@@ -98,8 +98,8 @@ TEMPLATE_LOADERS = (
 )
 
 MIDDLEWARE_CLASSES = (
-    'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -179,14 +179,23 @@ LOGGING = {
     'filters': {
         'require_debug_false': {
             '()': 'django.utils.log.RequireDebugFalse'
-        }
+        },
+#        New in Django 1.5
+#        'require_debug_true': {
+#            '()': 'django.utils.log.RequireDebugTrue',
+#        },
     },
     'handlers': {
         'mail_admins': {
             'level': 'ERROR',
             'filters': ['require_debug_false'],
-            'class': 'django.utils.log.AdminEmailHandler'
-        }
+            'class': 'django.utils.log.AdminEmailHandler',
+            'include_html': True,
+        },
+        'console':{
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+        },
     },
     'loggers': {
         'django.request': {

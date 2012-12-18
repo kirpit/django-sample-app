@@ -4,8 +4,7 @@ django-sample-app is a **minimal** sample application to start developing your w
 
 The sample application comes with:
 
-* [H5BP](http://html5boilerplate.com/) v4.0.0
-* [Modernizr](http://modernizr.com/) v2.6.1
+* [Modernizr](http://modernizr.com/) v2.6.2
 * [jQuery](http://jquery.com/) v1.8.3
 * [jQuery UI](http://jqueryui.com/) v1.9.2
 * [Twitter Bootstrap](http://twitter.github.com/bootstrap/) v2.2.1
@@ -14,14 +13,14 @@ The sample application comes with:
 that are combined together with [initializr](http://www.initializr.com/). And its current `requirements.txt` file is:
 
 ```
-Django==1.4.2
+Django==1.4.3
 South==0.7.6
 django-admin-tools==0.4.1
 django-debug-toolbar==0.9.4
-django-extensions==1.0.1
+django-extensions==1.0.2
 django-pdb==0.3.2
 ipython==0.13.1
-psycopg2==2.4.5
+psycopg2==2.4.6
 readline==6.2.4.1
 wsgiref==0.1.2
 ```
@@ -58,7 +57,10 @@ You can find out the location of your "site-packages" folder by the following co
 
 `$ python -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())"`
 
-### 5. Settings
+### 5. Tweaks
+
+#### wsgihandler.py
+`wsgihandler.py` file is necessary for WSGI gateways (such as uWSGI) to run your Django application and also required from Django itself. You definitely want to change `sampleapp.settings` value in this file to whatever you name your application (e.g. `myproject.settings`).
 
 #### SECRET_KEY
 Go to <http://www.miniwebtool.com/django-secret-key-generator/>, create your secret key, copy it. Open your `myproject/settings/default.py`, find `SECRET_KEY` line, paste your secret key.
@@ -77,6 +79,10 @@ You should have already created your database and set the credentials in your `l
 
 `./manage.py syncdb` and `./manage.py migrate`
 
-Ready? Go!
+### Ready? Go!
+
+`./manage.py runserver`
+
+or
 
 `./manage.py runserver_plus`

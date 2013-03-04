@@ -8,7 +8,7 @@ TEMPLATE_DEBUG = DEBUG
 
 # Absolute paths for where the project and templates are stored.
 ABSOLUTE_PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '../..'))
-ABSOLUTE_TEMPLATES_PATH = os.path.abspath(os.path.join(ABSOLUTE_PROJECT_ROOT, 'sampleapp/templates/'))
+ABSOLUTE_TEMPLATES_PATH = os.path.abspath(os.path.join(ABSOLUTE_PROJECT_ROOT, 'templates/'))
 
 # add root directory to PYTHONPATH
 if not ABSOLUTE_PROJECT_ROOT in sys.path:

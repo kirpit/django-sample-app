@@ -1,5 +1,6 @@
 #! /usr/bin/env python2.7
-import os, sys
+import os
+import sys
 
 # Django settings for sampleapp project.
 
@@ -14,25 +15,21 @@ ABSOLUTE_TEMPLATES_PATH = os.path.abspath(os.path.join(ABSOLUTE_PROJECT_ROOT, 't
 if not ABSOLUTE_PROJECT_ROOT in sys.path:
     sys.path.insert(0, ABSOLUTE_PROJECT_ROOT)
 
-
-# Absolute filesystem path to the directory that will hold user-uploaded files.
-MEDIA_ROOT = os.path.abspath(os.path.join(ABSOLUTE_PROJECT_ROOT, 'media/'))
-
-
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
 STATIC_ROOT = os.path.abspath(os.path.join(ABSOLUTE_PROJECT_ROOT, 'static/'))
+# Absolute filesystem path to the directory that will hold user-uploaded files.
+MEDIA_ROOT = os.path.abspath(os.path.join(ABSOLUTE_PROJECT_ROOT, 'staticfiles/media/'))
 
 # URL that handles the media, static, etc.
-MEDIA_URL = '/media/'
 STATIC_URL = '/static/'
-ADMIN_MEDIA_PREFIX = '/static/admin/'
+MEDIA_URL = STATIC_URL + 'media/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    os.path.abspath(os.path.join(ABSOLUTE_PROJECT_ROOT, 'static_extra/')),
+    os.path.abspath(os.path.join(ABSOLUTE_PROJECT_ROOT, 'staticfiles/')),
 )
 
 ADMINS = (
@@ -43,12 +40,14 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'prod_database_name',                      # Or path to database file if using sqlite3.
-        'USER': 'prod_user',                      # Not used with sqlite3.
-        'PASSWORD': 'prod_p@ssword',                  # Not used with sqlite3.
-        'HOST': 'localhost',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+        # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'prod_database_name',
+        # The rest is not used with sqlite3:
+        'USER': 'prod_user',
+        'PASSWORD': 'prod_p@ssword',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
@@ -59,7 +58,7 @@ DATABASES = {
 # timezone as the operating system.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = 'Europe/Istanbul'
+TIME_ZONE = None
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
@@ -179,10 +178,10 @@ LOGGING = {
         'require_debug_false': {
             '()': 'django.utils.log.RequireDebugFalse'
         },
-#        New in Django 1.5
-#        'require_debug_true': {
-#            '()': 'django.utils.log.RequireDebugTrue',
-#        },
+        # New in Django 1.5
+        'require_debug_true': {
+            '()': 'django.utils.log.RequireDebugTrue',
+        },
     },
     'handlers': {
         'mail_admins': {
@@ -191,7 +190,7 @@ LOGGING = {
             'class': 'django.utils.log.AdminEmailHandler',
             'include_html': True,
         },
-        'console':{
+        'console': {
             'level': 'DEBUG',
             'class': 'logging.StreamHandler',
         },

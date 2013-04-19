@@ -3,7 +3,6 @@ South==0.7.6
 django-admin-tools==0.4.1
 django-debug-toolbar==0.9.4
 django-extensions==1.1.0
-django-pdb==0.3.2
 ipython==0.13.1
 psycopg2==2.4.6
 readline==6.2.4.1

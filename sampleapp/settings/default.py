@@ -139,7 +139,6 @@ ADMIN_TOOL_APPS = (
     'admin_tools.theming',
     'admin_tools.menu',
     'admin_tools.dashboard',
-    'django_pdb',
 )
 
 # django

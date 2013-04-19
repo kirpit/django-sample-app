@@ -32,7 +32,6 @@ INSTALLED_APPS += (
 
 MIDDLEWARE_CLASSES += (
     'debug_toolbar.middleware.DebugToolbarMiddleware',
-    'django_pdb.middleware.PdbMiddleware',
 )
 
 # django-debug-toolbar specific

@@ -3,6 +3,10 @@ local.py
 
 *.py[co]
 
+# ./manage.py collectstatic folder
+static-collected/*
+
+
 # Packages
 *.egg
 *.egg-info

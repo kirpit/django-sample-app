@@ -60,7 +60,7 @@ You also have to config your application URLs, specific to your own needs. For t
 Copy `projectname/settings/local.template.py` as `local.py` into the same directory and modify necessary changes. **local.py** is always ignored by **.gitignore**, so this is the machine specific settings mostly for development purposes.
 
 #### Initialize the database
-First set the database engine (PostgreSQL, MySQL, etc..) in your settings files; `projectname/settings/default.py` and/or `projectname/settings/local.py`. Then define your credentials as well. Time to finish it up:
+First set the database engine (PostgreSQL, MySQL, etc..) in your settings files; `projectname/settings/default.py` and/or `projectname/settings/local.py`. Of course, remember to install necessary database driver for your engine. Then define your credentials as well. Time to finish it up:
 
 `./manage.py syncdb` and `./manage.py migrate`
 

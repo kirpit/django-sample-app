@@ -13,14 +13,13 @@ The sample application comes with:
 that are glued together with [initializr](http://www.initializr.com/). And its current `requirements.txt` file is:
 
 ```
-Django==1.6.2
-South==0.8.4
-django-admin-tools==0.5.1
-django-debug-toolbar==1.0.1
-django-extensions==1.3.3
-ipython==1.2.0
-six==1.5.2
-sqlparse==0.1.11
+Django==1.7.1
+django-admin-tools==0.5.2
+django-debug-toolbar==1.2.2
+django-extensions==1.4.6
+ipython==2.3.0
+six==1.8.0
+sqlparse==0.1.13
 wsgiref==0.1.2
 ```
 
@@ -45,7 +44,7 @@ Right there, you will find the *requirements.txt* file that has all the great de
 ### 4. Tweaks
 
 #### wsgihandler.py
-`wsgihandler.py` file is necessary for WSGI gateways (such as uWSGI) to run your Django application and also required from Django itself. You definitely want to change `projectname.settings` value in this file to whatever you name your application (e.g. `bookstore.settings`).
+`projectname/wsgihandler.py` file is necessary for WSGI gateways (such as uWSGI) to run your Django application and also required from Django itself. You definitely want to change `projectname.settings` value in this file to whatever you name your application (e.g. `bookstore.settings`).
 
 #### SECRET_KEY
 Go to <http://www.miniwebtool.com/django-secret-key-generator/>, create your secret key, copy it. Open your `projectname/settings/default.py`, find `SECRET_KEY` line, paste your secret key.
@@ -62,7 +61,7 @@ Copy `projectname/settings/local.template.py` as `local.py` into the same direct
 #### Initialize the database
 First set the database engine (PostgreSQL, MySQL, etc..) in your settings files; `projectname/settings/default.py` and/or `projectname/settings/local.py`. Of course, remember to install necessary database driver for your engine. Then define your credentials as well. Time to finish it up:
 
-`./manage.py syncdb` and `./manage.py migrate`
+`./manage.py migrate`
 
 ### Ready? Go!
 

@@ -111,7 +111,7 @@ ROOT_URLCONF = 'projectname.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
 # disabled - outsite the app
-WSGI_APPLICATION = 'wsgihandler.application'
+WSGI_APPLICATION = 'projectname.wsgihandler.application'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
@@ -156,11 +156,6 @@ CORE_APPS = (
 
 EXTERNAL_APPS = (
     'django_extensions',
-    'south',
-    # If you're using Django 1.7.x or later
-    #'debug_toolbar.apps.DebugToolbarConfig',
-    # If you're using Django 1.6.x or earlier
-    'debug_toolbar',
 )
 
 LOCAL_APPS = (

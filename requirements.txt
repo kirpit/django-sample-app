@@ -1,8 +1,8 @@
 Django==1.7.1
 django-admin-tools==0.5.2
 django-debug-toolbar==1.2.2
-django-extensions==1.4.6
-ipython==2.3.0
+django-extensions==1.4.8
+ipython==2.3.1
 six==1.8.0
 sqlparse==0.1.13
 wsgiref==0.1.2

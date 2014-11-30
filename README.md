@@ -6,9 +6,8 @@ The sample application comes with:
 
 * [Modernizr](http://modernizr.com/) v2.6.2
 * [jQuery](http://jquery.com/) v2.1.0 (No support for IE-8 or below)
-* [jQuery UI](http://jqueryui.com/) v1.10.4
-* [Twitter Bootstrap](http://getbootstrap.com/) v3.1.1
-* [Font Awesome](http://fontawesome.io/) v4.0.3
+* [Twitter Bootstrap](http://getbootstrap.com/) v3.3.1
+* [Font Awesome](http://fontawesome.io/) v4.2.0
 
 that are glued together with [initializr](http://www.initializr.com/). And its current `requirements.txt` file is:
 

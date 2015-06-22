@@ -1,4 +1,4 @@
-{% load static %}{% spaceless %}
+{% load static %}{% load compress %}{% spaceless %}
 <!doctype html>
 <html class="no-js" lang="">
 <head>
@@ -8,6 +8,7 @@
     <meta name="description" content="{% block description %}{% endblock %}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    {% compress css %}
     <link rel="stylesheet" href="{% static 'libs/bootstrap-3.3.5/css/bootstrap.min.css' %}">
     <style>
         body {
@@ -18,27 +19,21 @@
     <link rel="stylesheet" href="{% static 'libs/bootstrap-3.3.5/css/bootstrap-theme.min.css' %}">
     <link rel="stylesheet" href="{% static 'libs/font-awesome-4.3.0/css/font-awesome.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    {% endcompress %}
 
     <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <script>window.html5 || document.write('<script src="{% static '
-    libs / html5shiv.js
-    ' %}"><\/script>'
-    )</script>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script>window.html5 || document.write('<script src="{{ STATIC_URL }}libs/html5shiv.js"><\/script>')</script>
     <![endif]-->
 </head>
 <body>
 <!--[if lt IE 8]>
-<p class="browserupgrade">You are using an <strong>outdated</strong> browser.
-    Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve
-    your experience.</p>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed"
-                    data-toggle="collapse" data-target="#navbar"
-                    aria-expanded="false" aria-controls="navbar">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -49,11 +44,12 @@
         <div id="navbar" class="navbar-collapse collapse">
             <form class="navbar-form navbar-right" role="form">
                 <div class="form-group">
-                    <input type="text" placeholder="Email" class="form-control">&nbsp;
+                    <input type="text" placeholder="Email" class="form-control">
+                    <span>&nbsp;</span>
                 </div>
                 <div class="form-group">
-                    <input type="password" placeholder="Password"
-                           class="form-control">&nbsp;
+                    <input type="password" placeholder="Password" class="form-control">
+                    <span>&nbsp;</span>
                 </div>
                 <button type="submit" class="btn btn-success">Sign in</button>
             </form>
@@ -69,6 +65,7 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="{{ STATIC_URL }}libs/jquery/2.1.0/jquery-2.1.0.min.js"><\/script>')</script>
 
+{% compress js %}
 <script src="{% static 'libs/bootstrap-3.3.5/js/bootstrap.min.js' %}"></script>
 <script src="{% static 'js/main.js' %}"></script>
 
@@ -89,6 +86,7 @@
     ga('create', 'UA-XXXXX-X', 'auto');
     ga('send', 'pageview');
 </script>
+{% endcompress %}
 </body>
 </html>
 {% endspaceless %}

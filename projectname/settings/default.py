@@ -69,10 +69,6 @@ DATABASES = {
 # Application definition
 # django debugging stuff
 ADMIN_TOOLS = (
-    'admin_tools',
-    'admin_tools.theming',
-    'admin_tools.menu',
-    'admin_tools.dashboard',
 )
 
 # django
@@ -101,7 +97,8 @@ INSTALLED_APPS = ADMIN_TOOLS + DJANGO_APPS + LOCAL_APPS + EXTERNAL_APPS
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
-# in the directory "static-assets/" then do the 'collectstatic'.
+# in the directory "static-assets/" then do `./manage.py migrate` on
+# production.
 STATIC_ROOT = '%s/static' % ABS_PROJECT_ROOT
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 MEDIA_ROOT = '%s/media' % ABS_PROJECT_ROOT
@@ -123,6 +120,7 @@ STATICFILES_DIRS = (
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
 )
 
 
@@ -146,7 +144,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [ABS_TEMPLATES_PATH],
-        'APP_DIRS': False,
+        'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -171,9 +169,6 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
 )
-
-
-# TEST_RUNNER = 'django.test.runner.DiscoverRunner'
 
 
 # A sample logging configuration. The only tangible logging

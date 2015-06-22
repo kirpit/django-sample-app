@@ -4,21 +4,22 @@ django-sample-app is a **minimal** sample application to start developing your w
 
 The sample application comes with:
 
-* [Modernizr](http://modernizr.com/) v2.6.2
+* [html5shiv](https://github.com/afarkas/html5shiv)
 * [jQuery](http://jquery.com/) v2.1.0 (No support for IE-8 or below)
-* [Twitter Bootstrap](http://getbootstrap.com/) v3.3.1
-* [Font Awesome](http://fontawesome.io/) v4.2.0
+* [Twitter Bootstrap](http://getbootstrap.com/) v3.3.5
+* [Font Awesome](http://fontawesome.io/) v4.3.0
 
 that are glued together with [initializr](http://www.initializr.com/). And its current `requirements.txt` file is:
 
 ```
-Django==1.7.3
-django-admin-tools==0.5.2
-django-debug-toolbar==1.2.2
-django-extensions==1.4.9
-ipython==2.3.1
+Django==1.8.2
+django-compressor==1.5
+django-debug-toolbar==1.3.2
+django-extensions==1.5.5
+ipython==3.2.0
+psycopg2==2.6.1
 six==1.9.0
-sqlparse==0.1.13
+sqlparse==0.1.15
 wsgiref==0.1.2
 ```
 
@@ -43,13 +44,13 @@ Right there, you will find the *requirements.txt* file that has all the great de
 ### 4. Tweaks
 
 #### wsgi.py
-`projectname/wsgi.py` file is necessary for WSGI gateways (such as uWSGI) to run your Django application and also required from Django itself. You definitely want to change `projectname.settings` value in this file to whatever you name your application (e.g. `bookstore.settings`).
+`projectname/wsgi.py` file is necessary for WSGI gateways (such as uWSGI) to run your Django application and also required from Django itself. You definitely want to change `{{ projectname }}` value in this file to whatever you name your application (e.g. `bookstore.settings`).
 
 #### SECRET_KEY
 Go to <http://www.miniwebtool.com/django-secret-key-generator/>, create your secret key, copy it. Open your `projectname/settings/default.py`, find `SECRET_KEY` line, paste your secret key.
 
 #### Other settings stuff
-It is good idea to make a **find & replace** within this default settings file as there are some "projectname" string left such as `ROOT_URLCONF` or `LOCAL_APPS` variables.
+It is good idea to make a **find & replace** within this default settings file as there are some "{{ projectname }}" string left such as `ROOT_URLCONF` or `LOCAL_APPS` variables.
 
 #### Main URL root
 You also have to config your application URLs, specific to your own needs. For the beginning, the sample app has only one view that you need to modify its namespace from `projectname/urls.py`, where it *imports HomeView*.
@@ -68,4 +69,4 @@ First set the database engine (PostgreSQL, MySQL, etc..) in your settings files;
 
 or
 
-`./manage.py runserver_plus`
+`./manage.py runserver_plus` (Requires Werkzeug)

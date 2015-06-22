@@ -9,6 +9,7 @@ Instead, make a copy as "local.py" and set the development variables in it.
 # local settings
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
+COMPRESS_ENABLED = True
 
 
 DATABASES = {
@@ -43,9 +44,5 @@ if DEBUG:
     MEDIA_URL = STATIC_URL + 'media/'
 
     INSTALLED_APPS += (
-        'debug_toolbar',
-    )
-
-    MIDDLEWARE_CLASSES += (
-        'debug_toolbar.middleware.DebugToolbarMiddleware',
+        # 'debug_toolbar',
     )

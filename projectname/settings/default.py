@@ -87,6 +87,7 @@ LOCAL_APPS = (
 
 EXTERNAL_APPS = (
     'django_extensions',
+    'compressor',
 )
 
 # the order is important!

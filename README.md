@@ -44,13 +44,13 @@ Right there, you will find the *requirements.txt* file that has all the great de
 ### 4. Tweaks
 
 #### wsgi.py
-`projectname/wsgi.py` file is necessary for WSGI gateways (such as uWSGI) to run your Django application and also required from Django itself. You definitely want to change `{{ projectname }}` value in this file to whatever you name your application (e.g. `bookstore.settings`).
+`projectname/wsgi.py` file is necessary for WSGI gateways (such as uWSGI) to run your Django application and also required from Django itself. You definitely want to change `{{ project_name }}` value in this file to whatever you name your application (e.g. `bookstore.settings`).
 
 #### SECRET_KEY
 Go to <http://www.miniwebtool.com/django-secret-key-generator/>, create your secret key, copy it. Open your `projectname/settings/default.py`, find `SECRET_KEY` line, paste your secret key.
 
 #### Other settings stuff
-It is good idea to make a **find & replace** within this default settings file as there are some "{{ projectname }}" string left such as `ROOT_URLCONF` or `LOCAL_APPS` variables.
+It is good idea to make a **find & replace** within this default settings file as there are some "{{ project_name }}" string left such as `ROOT_URLCONF` or `LOCAL_APPS` variables.
 
 #### Main URL root
 You also have to config your application URLs, specific to your own needs. For the beginning, the sample app has only one view that you need to modify its namespace from `projectname/urls.py`, where it *imports HomeView*.

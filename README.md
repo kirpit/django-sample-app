@@ -1,5 +1,19 @@
 # django-sample-app
 
+# Nota
+Modificado para desplegar sobre Google App Engine.
+
+Pasos:
+* Crear nueva app en la [Consola de Google App Engine](https://console.developers.google.com/)
+* mkvirtualenv -p /usr/bin/python2.7 miapp
+* Cambiar el nombre de la aplicación en app.yml
+* pip install -r requirements.txt
+* pip install -t lib -r requirements_gae.txt
+* dev_appserver.py .
+* appcfg.py update app.yaml
+
+- - -
+
 django-sample-app is a **minimal** sample application to start developing your web project immediately on [Django framework](https://www.djangoproject.com/). 
 
 The sample application comes with:

@@ -1,4 +1,4 @@
-{% load static %}{% load compress %}{% spaceless %}
+{% load static %}{% spaceless %}
 <!doctype html>
 <html class="no-js" lang="">
 <head>
@@ -8,7 +8,6 @@
     <meta name="description" content="{% block description %}{% endblock %}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {% compress css %}
     <link rel="stylesheet" href="{% static 'libs/bootstrap-3.3.5/css/bootstrap.min.css' %}">
     <style>
         body {
@@ -19,7 +18,6 @@
     <link rel="stylesheet" href="{% static 'libs/bootstrap-3.3.5/css/bootstrap-theme.min.css' %}">
     <link rel="stylesheet" href="{% static 'libs/font-awesome-4.3.0/css/font-awesome.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
-    {% endcompress %}
 
     <!--[if lt IE 9]>
         <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -65,7 +63,6 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="{{ STATIC_URL }}libs/jquery/2.1.0/jquery-2.1.0.min.js"><\/script>')</script>
 
-{% compress js %}
 <script src="{% static 'libs/bootstrap-3.3.5/js/bootstrap.min.js' %}"></script>
 <script src="{% static 'js/main.js' %}"></script>
 
@@ -86,7 +83,6 @@
     ga('create', 'UA-XXXXX-X', 'auto');
     ga('send', 'pageview');
 </script>
-{% endcompress %}
 </body>
 </html>
 {% endspaceless %}

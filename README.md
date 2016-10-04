@@ -61,11 +61,17 @@ Copy `projectname/settings/local.template.py` as `local.py` into the same direct
 #### Initialize the database
 First set the database engine (PostgreSQL, MySQL, etc..) in your settings files; `projectname/settings/default.py` and/or `projectname/settings/local.py`. Of course, remember to install necessary database driver for your engine. Then define your credentials as well. Time to finish it up:
 
-`./manage.py migrate`
+`python ./manage.py migrate`
+
+#### Create SuperUser
+
+After building the initial database, it is usefull to create a initial super user to login the admin (/admin) area.
+
+`python ./manage.py createsuperuser --username=joe --email=joe@example.com`
 
 ### Ready? Go!
 
-`./manage.py runserver`
+`python ./manage.py runserver`
 
 or
 

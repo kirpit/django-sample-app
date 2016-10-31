@@ -20,7 +20,6 @@ DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ALLOWED_HOSTS = (
-
 )
 
 # SECURITY WARNING: keep the secret key used in production secret!

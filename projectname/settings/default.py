@@ -19,7 +19,7 @@ import sys
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
-ALLOWED_HOSTS = ("*"
+ALLOWED_HOSTS = (
 )
 
 # SECURITY WARNING: keep the secret key used in production secret!

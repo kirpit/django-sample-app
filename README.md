@@ -1,7 +1,9 @@
-# django-sample-app
+# Django ML Web Application
+# A fork from django-sample-app
 
-django-sample-app is a **minimal** sample application to start developing your web project immediately on [Django framework](https://www.djangoproject.com/). 
+This web applicaion was created b edla4eva user o impliment basic machine learning algorihms on a web applicaion 
 
+Documentation:
 The sample application comes with:
 
 * [html5shiv](https://github.com/afarkas/html5shiv)
